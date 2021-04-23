@@ -1,10 +1,62 @@
-{% extends "layout.html" %}
-{% block title %}Flask MVC App{% endblock %}
-{% block page %}Flask MVC App{% endblock %}
+<html>
+<head>
+    <title>Login and Sign Up</title>
+    <link rel= "stylesheet" href="style.css">
+</head>
+<body>
+<div class= "hero">
+    <div class= "form-box">
+        <div class="button-box">
+            <div id= "btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+            <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+        </div>
+             <div class="social-icons">
+                    <a href="https://www.facebook.com/">
+                    <img src="facebookicon.png">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                    <img src="instagramicon.png">
+                    </a>
+                    <a href="https://www.whatsappweb.com/">
+                    <img src="whatsappicon.png">
+                    </a>
+             </div>
 
-{{ super() }}
+            <form id="login" class="input-group">
+                <input type= "text" class="input-field" placeholder="Username" required>
+                <input type= "text" class="input-field" placeholder="Password" required>
+                <input type= "checkbox" class="check-box"><span>Remember Me</span>
+                <button type= "submit" class="submit-btn">Log In</button>
 
-{% block content %}
-    <h1>Flask MVC</h1>
-    <p>This is a boileplate flask application which follows the MVC pattern for structuring the project.</p>
-{% endblock %}
+            </form>
+            <form id= "register" class="input-group">
+                <input type= "text" class="input-field" placeholder="Username" required>
+                <input type= "email" class="input-field" placeholder="Email" required>
+                <input type= "text" class="input-field" placeholder="Password" required>
+                <input type= "checkbox" class="check-box"><span>I agree to the Terms and Conditions</span>
+                <button type= "submit" class="submit-btn">Register</button>
+            </form>
+
+</div>
+</div>
+
+<script>
+var x= document.getElementById("login");
+var y= document.getElementById("register");
+var z= document.getElementById("btn");
+
+function register(){
+  x.style.left="500px";
+  y.style.left="50px";
+  z.style.left="110px";
+}
+function login(){
+  x.style.left="50px";
+  y.style.left="500px";
+  z.style.left="0";
+}
+</script>
+
+</body>
+</html>
