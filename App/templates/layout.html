@@ -1,17 +1,18 @@
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{% block title %}{% endblock %}</title>
+    <style>
+    </style>
   </head>
   <body>
     <div class="navbar-fixed">
-        <nav class="nav-wrapper indigo">
+        <nav class="nav-wrapper #304ffe indigo accent-4">
             <div class="container">
-                <a href="#" class="brand-logo">LOGO-image</a>
+                <a href="#" class="brand-logo">{% block page %}{% endblock %}</a>
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                 <i class="material-icons">menu</i>
                 </a>
@@ -19,18 +20,57 @@
                     <li><a href="">Home</a></li>
                     <li><a href="">Grocery Lists</a></li>
                     <li><a href="">All Repcipes</a></li>
-                    <li><a href="#" class="btn indigo"><span>Username </span><span>Log out</span><i class="material-icons right">logout</i></a></li>
+                    <li><a href="#" class="btn #c2185b pink darken-2"><span>Bob </span><span>Log out</span><i class="material-icons right">logout</i></a></li>
                 </ul>
             </div>
         </nav>
   </div>
+  <nav class="container">
+    <div class="nav-wrapper #ffffff white">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons grey-text text-grey lighten-4">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
   <ul class="sidenav" id="mobile-links">
     <li><a href="">Home</a></li>
     <li><a href="">About</a></li>
     <li><a href="">Contact</a></li>
     <li><a href="">Logout</a></li>
   </ul>
-  <!-- BODY OF THE PAGE CAN GO BELOW HERE, jijna etc. -->
+  <!-- BODY OF THE PAGE CAN GO BELOW HERE,. -->
+  <div>
+      {% block content %}{% endblock %}
+  </div>
+  <footer class="page-footer #424242 grey darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Group Review</h5>
+                <p class="grey-text text-lighten-4">This was an immensely benificial and enjoyable course. Thank you! Sorry we were not smart enough to fufill all requirements of the project :(</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Group Members</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">816015418</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">816007114</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">816015560</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">816020039</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright #212121 grey darken-4">
+            <div class="container ">
+            © 2021 Copyright
+            <a class="grey-text text-lighten-4 right" href="#!">We Tried Our Hardest</a>
+            </div>
+          </div>
+        </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
