@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{% block title %}{% endblock %}</title>
     <style>
+      body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
     </style>
   </head>
   <body>
@@ -46,6 +55,7 @@
   <div>
       {% block content %}{% endblock %}
   </div>
+    <main></main>
   <footer class="page-footer #424242 grey darken-3">
           <div class="container">
             <div class="row">
