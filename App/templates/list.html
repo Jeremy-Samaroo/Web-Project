@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+{% block title %}Grocery List App{% endblock %}
+{% block page %}Grocery List App{% endblock %}
+
+{{ super() }}
+
+{% block content %}
+<div class="container">
+    <ul class="collapsible collapsible-accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons pink-text text-pink darken-2">shopping_cart</i>Bananas Foster Ice Cream </div>
+      <div class="collapsible-body"><span>
+          <p>
+            <label>
+                <input type="checkbox" checked="checked" />
+                <span>whole milk</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>kosher salt</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>vanilla bean</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>heavy cream</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>unsalted butter</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>light brown sugar</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>bananas</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>rum</span>
+            </label>
+        </p>
+    </span>
+</div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons pink-text text-pink darken-2">shopping_cart</i>Dreamy Chai Rice Pudding</div>
+      <div class="collapsible-body"><span>
+          <p>
+            <label>
+                <input type="checkbox" />
+                <span>long grain rice</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" checked="checked" />
+                <span>whole milk</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>ginger powder</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>whole star anise</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>cloves</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>vanilla essence</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" checked="checked" />
+                <span>tea</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" checked="checked" />
+                <span>cinnamon powder</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>brown sugar</span>
+                </label>
+        </p>
+    </span>
+</div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons pink-text text-pink darken-2">shopping_cart</i>Ham with Orange Rosemary Marmalade Glaze</div>
+      <div class="collapsible-body"><span>
+          <p>
+            <label>
+                <input type="checkbox" />
+                <span>ham</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>orange zest</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>apple cider</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>brown sugar</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" checked="checked" />
+                <span>apple juice</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" checked="checked" />
+                <span>orange juice</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" checked="checked" />
+                <span>fresh ginger</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>orange marmalade</span>
+                </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" />
+                <span>fresh rosemary</span>
+                </label>
+        </p>
+    </span>
+</div>
+    </li>
+  </ul>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.collapsible').collapsible();
+});
+</script>
+{% endblock %}
