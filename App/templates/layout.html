@@ -1,47 +1,92 @@
 <!doctype html>
 <html>
   <head>
-  
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{% block title %}{% endblock %}</title>
+    <style>
+      body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
 
+  main {
+    flex: 1 0 auto;
+  }
+    </style>
   </head>
   <body>
-    <nav class="purple">
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">{% block page %}{% endblock %}</a>
-        <div class="nav-wrapper">
-            <ul id="nav-mobile" class="left">
-                <li><a href="/">Home</a></li>
-                <li><a href="/users">Users Jinja</a></li>
-                <li><a href="/static/users">Users JS</a></li>
-            </ul>
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper #304ffe indigo accent-4">
+            <div class="container">
+                <a href="/homepage" class="brand-logo"><img src="../static/Logo2.png" alt="Logo" width="190" height="63"></a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/homepage">Home</a></li>
+                    <li><a href="/list">Grocery Lists</a></li>
+                    <li><a href="/recipes">All Repcipes</a></li>
+                    <li><a href="/" class="btn #c2185b pink darken-2"><span>Bob </span><span>Log out</span><i class="material-icons right">logout</i></a></li>
+                </ul>
+            </div>
+        </nav>
+  </div>
+  <nav class="container">
+    <div class="nav-wrapper #ffffff white">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons grey-text text-grey lighten-4">search</i></label>
+          <i class="material-icons">close</i>
         </div>
-      </div>
-    </nav>
-    
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <nav class="white black-text" style="padding: 10px">
-      <div class="nav-wrapper">
-          <ul class="flashes">
-          {% for message in messages %}
-            <li>{{ message }}</li>
-          {% endfor %}
-          </ul>
-      </div>
-    </nav>
-    {% endif %}
-    {% endwith %}
-
-    <div class="container" id="content">{% block content %}{% endblock %}</div>
-
+      </form>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-links">
+    <li><a href="/homepage">Home</a></li>
+    <li><a href="/list">Grocery List</a></li>
+    <li><a href="/recipes">Recipes</a></li>
+    <li><a href="/">Logout</a></li>
+  </ul>
+  <!-- BODY OF THE PAGE CAN GO BELOW HERE,. -->
+  <div>
+      {% block content %}{% endblock %}
+  </div>
+    <main></main>
+  <footer class="page-footer #424242 grey darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Group Review</h5>
+                <p class="grey-text text-lighten-4">This was an immensely benificial and enjoyable course. Thank you! Sorry Database could not initialize.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Group Members</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">816015418</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">816007114</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">816015560</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">816020039</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright #212121 grey darken-4">
+            <div class="container ">
+            © 2021 Copyright
+            <a class="grey-text text-lighten-4 right" href="#!">We Tried Our Hardest</a>
+            </div>
+          </div>
+        </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        });
+  </script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 <head>
     <title>Login and Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" href="style.css">
+    <link rel= "stylesheet" href="../static/style.css">
 </head>
 <body>
 <div class= "hero">
@@ -13,28 +13,28 @@
             <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
         </div>
              <div class="social-icons">
-                    <a href="https://www.facebook.com/">
-                    <img src="facebookicon.png">
-                    </a>
-                    <a href="https://www.instagram.com/">
-                    <img src="instagramicon.png">
-                    </a>
-                    <a href="https://www.whatsappweb.com/">
-                    <img src="whatsappicon.png">
-                    </a>
+                    
+                    <img src="../static/facebookicon.png">
+                    
+                    
+                    <img src="../static/instagramicon.png">
+                    
+                    
+                    <img src="../static/whatsappicon.png">
+                    
              </div>
 
-            <form id="login" class="input-group">
+            <form id="login" class="input-group" action="/homepage">
                 <input type= "text" class="input-field" placeholder="Username" required>
-                <input type= "text" class="input-field" placeholder="Password" required>
+                <input type= "password" class="input-field" placeholder="Password" required>
                 <input type= "checkbox" class="check-box"><span>Remember Me</span>
                 <button type= "submit" class="submit-btn">Log In</button>
 
             </form>
-            <form id= "register" class="input-group">
+            <form id= "register" class="input-group" action="/homepage">
                 <input type= "text" class="input-field" placeholder="Username" required>
                 <input type= "email" class="input-field" placeholder="Email" required>
-                <input type= "text" class="input-field" placeholder="Password" required>
+                <input type= "password" class="input-field" placeholder="Password" required>
                 <input type= "checkbox" class="check-box"><span>I agree to the Terms and Conditions</span>
                 <button type= "submit" class="submit-btn">Register</button>
             </form>
